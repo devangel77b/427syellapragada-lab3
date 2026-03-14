@@ -1,0 +1,6 @@
+1. This is a review of the manuscript "The effect of popper design on maximum jump height" by Yellapragada, Coulanges, Dakwale, Hein, and Wallace. I recommend major revisions / resubmit.
+
+2. The manuscript focuses on if happy or sad poppers jump higher and covers that sufficiently, however, a requirement was to deal in some way with energy conservation. The manuscript gives equations for KE and PE but then never uses them and never computes the energy, nor does it test if energy is conserved in this system.
+
+3. It is OK to examine the effect of design as an additional extra investigation but in leaving out energy the paper effectively leaves out any relevant physics, and the paper is essentially a statistical methods paper (which I do not think is what the authors intend). As a statistical methods paper, the MS would be rejected for lack of mathematical rigor, proofs, or innovation beyond standard textbook statistical hypothesis testing which has been around for more than 100 years.
+
