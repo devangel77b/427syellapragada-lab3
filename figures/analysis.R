@@ -28,6 +28,6 @@ ggplot(popper_data, aes(x = Type, y = Mean, fill = Type)) +
 
 
 # saving graph as svg
-ggsave("myplot.svg", width = 5, height = 5, dpi = 300)
+ggsave("myplot.svg", width = 3.4167, height = 2, dpi = 300)
 
 
