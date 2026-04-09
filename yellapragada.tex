@@ -69,7 +69,7 @@ pdfauthor={Kaitlin Coulanges, Saanvi Dakwale, Samantha Hein, Reese Wallace, and 
 
 % AUTHORS PUT YOUR MANUSCRIPT IN BELOW HERE
 \begin{abstract}
-This experiment investigates whether the facial expression of a popper affects its maximum jump height using principles of energy conservation. Five ``happy'' poppers and five ``sad'' poppers were compressed to maximum depth and released, converting elastic potential energy into kinetic energy, and then gravitational potential energy. At peak height, mean GPE for happy poppers was \qty{96.2\pm15.6}{\milli\joule}  and \qty{83.1\pm9.2}{\milli\joule}. A two-sample, two-tailed $t$-test revealed no statistically significant difference in peak heights ($p = 0. 24 > \alpha = 0. 05$), or in masses ($p = 0. 12 > \alpha = 0. 05$). These results support our hypothesis that facial expression does not have any meaningful effect on energy transfer efficiency, and is dictated mainly by elastic properties.
+This experiment investigates whether the facial expression of a popper affects its maximum jump height using principles of energy conservation. Five ``happy'' poppers and five ``sad'' poppers were compressed to maximum depth and released, converting elastic potential energy into kinetic energy, and then gravitational potential energy. Elastic potential energy was measured via a force-compression graph ($EPE = \qty{0.294}{\joule}$). Mean kinetic energy ($K$) at launch was \qty{0.0941}{\joule} (happy) and \qty{0.0814}{\joule} (sad), representing approximately \num{32}\% and \num{28}\% of stored $EPE$ respectively. Paired $t$-tests confirmed that $K$ at launch and $GPE$ at peak were not significantly different within either group (happy: $p = 0.41$; sad: $p = 0.43$), verifying that mechanical energy is conserved during flight. Two-sample $t$-tests found no statistically significant difference in mass ($p = 0.12$) or height ($p = 0.24$). These results support the hypothesis that facial expression does not affect energy transfer, and that popper motion is governed by elastic properties and mass rather than surface design.
 
 %\vspace{1em} % Add space before DOI
 %\noindent DOI: \href{https://doi.org/10.64804/xxxxxx}{10.64808/xxxxxx}
@@ -87,26 +87,20 @@ This experiment investigates whether the facial expression of a popper affects i
 
 
 \section{Introduction} 
-When a popper is compressed, work is done to deform the material, storing elastic potential energy. This
-energy can be expressed as: 
-\begin{equation} 
-U_s = \frac{1}{2}k x^2,
-\label{eq:epe}
-\end{equation} 
-where $k$ is the spring constant and $x$ is the compression distance \cite{tipler}. Upon release, this stored elastic potential energy is rapidly converted into kinetic energy ($KE$), given by: 
+When a popper is compressed, work is done to deform the material, storing elastic potential energy ($EPE$). This work can be described by the area under the force versus compression graph. 
+Upon release of the popper, $EPE$ is rapidly converted into kinetic energy ($KE$), given by:
 \begin{equation} 
 KE = \frac{1}{2} m v^2,
 \label{eq:ke}
-\end{equation} 
-where $m$ is the mass and $v$ is the velocity \cite{tipler}. As the popper rises, its kinetic energy is transformed into gravitational potential energy (GPE). At the maximum height ($h$), the popper's velocity is approximately zero, meaning the energy is momentarily stored entirely as GPE, described as:
-\begin{equation} 
-GPE = mgh
-\label{eq:gpe} 
-\end{equation} 
+\end{equation}
+where $m$ is the mass and $v$ is the velocity \cite{tipler}. As the popper rises, $KE$ is transformed into gravitational potential energy (GPE). 
+At maximum height ($h$), where velocity is approximately zero, GPE is given by:
+\begin{equation}
+GPE = mgh,
+\label{eq:gpe}
+\end{equation}
 where $g=\qty{9.8}{\meter\per\second\squared}$ is the acceleration due to gravity \cite{tipler}.
-
-By measuring the maximum height reached, we can estimate the efficiency of this energy transfer. Theoretically, a greater maximum height indicates a greater conversion of elastic potential energy into upward motion. This experiment investigates whether the design of a popper, specifically a ``happy'' versus a
-``sad'' facial expression, influences the maximum height reached. We hypothesize that the facial expression will not significantly affect the height, as energy transfer primarily relies on the physical mass and the elastic properties of the popper.
+If energy is conserved between launch and peak, then $KE$ will be approximately equal to $GPE$. In this experiment, we aim to determine whether the facial expression of a rubber popper affects its maximum jump height. Because the two designs share the same elastic properties and composition, and primarily only differ in their facial expressions, we hypothesize that facial expression will not significantly affect maximum height achieved. Additionally, we wish to find whether or not energy is conserved during the flight of the popper, acting as justification for using height as an indicator of energy transfer.
 
 
 
@@ -115,10 +109,12 @@ By measuring the maximum height reached, we can estimate the efficiency of this 
 
 
 \section{Methods and materials} 
-This experiment was conducted using commercially available rubber poppers (Liberty Imports; Shantou, CN) with multiple facial expressions. Two types were chosen: ``happy,'' identified by an upward-curved mouth, and ``sad,'' denoted by a downward-curved mouth and tear-like markings beneath each eye. A sample size of $n=5$ was used for each facial expression group. The mass of each popper was measured on a digital scale (Smart Weight; Zhongshan, China). All trials were conducted indoors on a flat, level surface within a classroom to maintain consistent environmental conditions. For measuring jump height, two meter sticks (Westcott Rule Company; Shelton, CT) were taped vertically to the wall. For each trial, to reduce experimental error, the popper was compressed to its maximum depth on the floor. One student launched all the poppers to avoid experimental variability. To ensure accuracy, the maximum height of each jump was documented on an iPhone 16 (Apple Inc; Cupertino, CA), recording at \qty{240}{fps} with \num{1080}p and a standard wide-angle lens, placed at a fixed height above the ground.
+This experiment was conducted using commercially available rubber poppers (Liberty Imports; Shantou, CN) with multiple facial expressions. Two types were chosen: ``happy,'' identified by an upward-curved mouth, and ``sad,'' denoted by a downward-curved mouth and tear-like markings beneath each eye. A sample size of $n=5$ was used for each facial expression group. The mass of each popper was measured on a digital scale (Smart Weight; Zhongshan, China). 
 
-Specific landmarks of surrounding signs and posters were used to calibrate height of the popper after launch, from which jump heights for each popper were determined and recorded. To reduce bias, the order of the trials was randomized rather than testing all poppers of one facial expression. Trials in which the popper failed to launch properly were discarded. Outliers, defined as trials where the height was two or more standard deviations from the mean, were also excluded from the final analysis. Mass and jump height were analyzed using a Google Sheets \cite{googlesheets} to calculate the mean and standard deviation for each group. \texttt{R} \cite{R}, with library \texttt{ggplot2} \cite{ggplot2}, was used to create a bar chart comparing the mean maximum jump height for happy and sad poppers. Two-sample, two-tailed $t$-tests were performed to compare both the masses and the maximum jump heights of the happy and sad poppers. A two-sample, two-tailed $t$-test was also performed, to examine whether the mass, height, and GPE were the same for the happy and sad groups. 
-%The following hypotheses were tested:
+All trials were conducted indoors on a flat, level surface within a classroom to maintain consistent environmental conditions. For measuring jump height, two meter sticks (Westcott Rule Company; Shelton, CT) were taped vertically to the wall. For each trial, to reduce experimental error, the popper was compressed to its maximum depth on the floor. Additionally, one student launched all the poppers. To ensure accuracy, the maximum height of each jump was documented on an iPhone 16 (Apple Inc; Cupertino, CA), recording at \qty{240}{fps} with \num{1080}p and a standard wide-angle lens, placed at a fixed height above the ground. 
+
+Specific landmarks were used to calibrate height of the popper after launch, from which jump heights for each popper were determined and recorded. Launch velocity was measured using FizziQ \cite{fizziq}. The frame closest to the release of the popper was defined as $y = 0, t = 0$. To reduce bias, trial order was randomized rather than testing all poppers of one facial expression and trials in which the popper failed to launch properly were discarded. Outliers, defined as trials where the height was two or more standard deviations from the mean, were also excluded from the final analysis. To measure $EPE$, a digital scale was set to zero beneath the popper and a scissor jack was placed directly above it, compressing the popper in controlled increments. The mass readings were converted to force ($F = mg$) at each measured compression distance. $EPE$ was calculated as the area under the force-compression curve. $KE$ and $GPE$ were calculated from \cref{eq:ke,eq:gpe} for each trial. 
+%The following hypotheses were tested using two-sampled, two-tailed $t$-tests ($\alpha=0.05$):
 %Regarding masses:
 %𝐻0, 𝐴: µℎ𝑎𝑝𝑝𝑦 𝑚𝑎𝑠𝑠 = µ𝑠𝑎𝑑 𝑚𝑎𝑠𝑠 , or, no difference in the mean masses of the poppers
 %𝐻1, 𝐴: µℎ𝑎𝑝𝑝𝑦 𝑚𝑎𝑠𝑠 ≠ µ𝑠𝑎𝑑 𝑚𝑎𝑠𝑠 , or, a significant difference exists between the mean masses of the
@@ -127,23 +123,28 @@ Specific landmarks of surrounding signs and posters were used to calibrate heigh
 %𝐻0, 𝐵: µℎ𝑎𝑝𝑝𝑦 ℎ𝑒𝑖𝑔ℎ𝑡 = µ𝑠𝑎𝑑 ℎ𝑒𝑖𝑔ℎ𝑡 , or, no difference in the mean jump height
 %𝐻1, 𝐵: µℎ𝑎𝑝𝑝𝑦 ℎ𝑒𝑖𝑔ℎ𝑡 ≠ µ𝑠𝑎𝑑 ℎ𝑒𝑖𝑔ℎ𝑡 , or, a significant difference exists between the mean jump
 %heights
-%Regarding GPE:
-%𝐻0, 𝐶: µℎ𝑎𝑝𝑝𝑦 𝐺𝑃𝐸 = µ𝑠𝑎𝑑 𝐺𝑃𝐸 , or, no difference in mean GPE
-%𝐻1, 𝐶: µℎ𝑎𝑝𝑝𝑦 𝐺𝑃𝐸 ≠ µ𝑠𝑎𝑑 𝐺𝑃𝐸 , or, a significant difference exists in mean GPE
-%The setup for the experiment is shown in the figure below.
-%Fig. 1 Experimental Setup (see attachments instead)
+% Additionally, paired two-tailed $t$-tests were performed to evaluate energy conservation:
+%𝐻0, C: µdiff = 0 , (where $KE = GPE$)
+%𝐻1, C: µdiff ≠ 0
 
-The experimental setup is illustrated in \cref{fig:setup}.
+Data analysis and the force-compression graph were done in Google Sheets \cite{googlesheets}. \texttt{R} with library \texttt{ggplot2} \cite{R, ggplot2}, was used to create a bar chart comparing the mean maximum jump height for happy and sad poppers.
+
+The experimental setup is illustrated in \cref{fig:setup}. The setup for measuring $EPE$ is illustrated in \cref{fig:setup_epe}.
 \begin{figure}
 \begin{center}
-\includegraphics[width=\columnwidth]{figures/setupphoto.png}
+\includesvg[width=\columnwidth]{figures/setupphoto.svg}
 \end{center}
 \caption{Experimental setup showing the vertical calibration scale and popper placement.}
 \label{fig:setup} 
 \end{figure}
 
-
-
+\begin{figure}
+\begin{center}
+\includesvg[width=\columnwidth]{figures/scissor_jack.svg}
+\end{center}
+\caption{The scissor jack was used to apply a controlled force and the digital scale recorded the normal force at various compressions.}
+\label{fig:setup_epe}
+\end{figure}
 
 
 
@@ -151,6 +152,14 @@ The experimental setup is illustrated in \cref{fig:setup}.
 
 \section{Results} 
 The measured mass, maximum jump height, and calculated gravitational potential energy (GPE) for the happy and sad popper groups are summarized in \cref{tab:happy} and \cref{tab:sad}, respectively.
+\begin{figure}
+\begin{center}
+\includesvg[width=\columnwidth]{figures/force_graph.svg}
+\end{center}
+\caption{Force versus compression graph used to calculate total $EPE$ via area under the curve.}
+\label{fig:force_graph} 
+\end{figure}
+The force-compression graph is seen in \cref{fig:force_graph}. Total ($EPE$) was calculated by integrating the area under the curve in three segments, giving \qty{0.294}{\joule}.
 
 \begin{table}
 \caption{Mass $m$, height $h$, and gravitational potential energy for happy poppers.}
@@ -227,18 +236,16 @@ GPE        & 1.59 & 8 & 0.16 & 0.05 \\
 
 
 \section{Discussion}
-The results of this experiment indicate that popper design does not have a statistically significant effect on maximum jump height. Although the mean height of the happy poppers (\qty{1.72}{\meter}) was slightly greater than that of the sad poppers (\qty{1.55}{\meter}), the distributions overlap substantially, as indicated by \cref{fig:2}. The two-tailed $t$-test gave $p=0.25$, which is greater than $\alpha=0.05$. Therefore, we fail to reject the null hypothesis, indicating that facial expression does not significantly affect jump height.
+The results of this experiment indicate that popper design does not have a statistically significant effect on maximum jump height. Although the mean height of the happy poppers (\qty{1.72}{\meter}) was slightly greater than that of the sad poppers (\qty{1.55}{\meter}), the distributions overlap substantially, as indicated by \cref{fig:2}. \cref{tab:ttest_two} shows that $p=0.24$ for height, which is greater than $\alpha=0.05$. Therefore, we fail to reject the null hypothesis. Additionally, no significant difference was found in mass ($p = 0.12$), indicating that the height difference is attributable to other factors rather than mass being a confounding variable. 
 
-To better analyze the physics of the situation, GPE was calculated for each trial as well, as seen in \cref{tab:happy} and \cref{tab:sad}. Through this calculation, we were able to observe the transfer of elastic energy, from the popper being compressed, to motion (kinetic energy), to height.
+Energy conservation during the flight period was tested to determine if height was a valid measure of energy output. As found in \cref{tab:ttest_paired}, the paired $t$-test within each group found no statistically significant difference between $KE$ at launch and $GPE$ at peak height (happy: $p = 0.41$, sad: $p = 0.43$). This confirms that mechanical energy was conserved during the flight period and that $GPE$ at peak reliably reflects $KE$ at launch. This also indicates that $EPE$ was successfully transferred into upward motion.
 
-The calculated mean GPE values, seen in \cref{tab:happy} and \cref{tab:sad}, show a slight difference of \qty{13.1}{\milli\joule}. However, as seen in \cref{tab:stats}, a $t$-test between the two energy values resulted in $p=0.16$, indicating that the difference is not statistically significant and likely due to random variation. Since mass influences the conversion of energy into vertical motion, seen by \cref{eq:epe,eq:ke}, a statistical comparison of popper masses was performed. The comparison showed no statistically significant difference, with $p=0.15$, indicating that mass was likely not a confounding variable in the height comparison.
+The force-compression measurement gave an $EPE$ of \qty{0.294}{\joule}. As seen by \cref{tab:happy} and \cref{tab:sad}, mean $KE$ at launch for the happy poppers was \qty{0.0941}{\joule} and \qty{0.0814}{\joule} for the sad poppers, representing approximately \num{32}\% and \num{28}\% of the stored $EPE$, respectively. This suggests that approximately \num{70}\% of the elastic energy is lost during the initial compression phase, likely as heat, sound, or internal deformation. Once launched, however, both types conserve energy with comparable efficiency, further supporting the conclusion that facial expression does not influence energy transfer.
 
-The motion of the poppers is consistent with qualitative expectations from energy conservation. As illustrated by the experimental setup in \cref{fig:setup}, compressing the popper requires work to be done on the material, storing elastic potential energy. Upon release, this energy is converted into kinetic energy and then into gravitational potential energy at the peak of the jump. Although mechanical energy is not perfectly conserved due to non-conservative forces such as air resistance, sound, and internal deformation of the rubber, both popper types experienced similar conditions throughout the experiment. The comparable height distributions observed in \cref{fig:2} therefore suggest that differences in facial design do not meaningfully affect the efficiency of energy transfer.
-
-Overall, the statistical results and graphical evidence collectively support the hypothesis that facial expression does not influence maximum jump height. Instead, the motion of the poppers is governed primarily by elastic properties, mass and energy conservation and transfer mechanisms, rather than surface-level design features.
+Overall, the statistical results and graphical evidence  support the hypothesis that facial expression does not influence maximum jump height. Instead, the motion of the poppers is governed primarily by elastic properties, mass, and energy conservation mechanisms rather than design features.
 
 \subsection{Source of Experimental Error} 
-A possible source of experimental error is the force at which each popper is launched. Despite the fixed location, since each jumper was popped by one individual and not a repeatable machine, the angle, speed, pressure, and force that each jumper is pressed on can differ each time, causing variability in the data. Variability could also have been caused by error in human reaction. From the videos of each popper, the max height was analyzed. Humans can misread exact measurements on a meter stick, which could cause inconsistencies in data. Finally, the most likely cause of error is wear. As the poppers were used before, it is likely that there were internal deformations that may have led to inconsistencies within the data.
+A possible source of experimental error is the force at which each popper is launched. Despite the fixed location, the launch was performed by an individual rather than a repeatable machine; thus, the angle, speed, and pressure applied during compression may have varied, causing variability in the data. Additionally, error in human reaction and observation during video analysis may have occurred. Measurements taken from a meter stick in videos can be misread, leading to inconsistencies. Finally, material wear is a likely cause of error. As the poppers had been used previously, internal deformations in the rubber may have altered the elastic properties over time, leading to inconsistent energy results.
 
     
     
@@ -249,7 +256,7 @@ A possible source of experimental error is the force at which each popper is lau
     
     
 \section{Acknowledgements}
-KC, SD, and SH collected data and recorded video. SH compressed all the poppers to be released and wrote the abstract. SY wrote the introduction, methods and materials, R code for the graph, and revised the manuscript. RW calculated results based on height data. SD explained sources of experimental error and performed all statistical analyses. KC created setup figures and wrote the discussion. All members contributed to proofreading and editing, as well as feedback on the overall paper.
+KC, SD, and SH primarily led data collection and recording. SH performed all popper compressions and authored the abstract. SY authored the introduction, methods and materials, generated the \texttt{R} code for graphical analysis, and revised the manuscript. RW calculated results based on height data. SD authored the sources of experimental error and performed all statistical analyses. KC performed the force-compression measurements, generated setup figures, and authored the discussion. All members contributed to proofreading, editing, and providing feedback on the final paper. We thank Dr. Evangelista for providing guidance, materials, and supervision throughout this laboratory exercise.
 
 
 
@@ -259,14 +266,12 @@ KC, SD, and SH collected data and recorded video. SH compressed all the poppers 
 
 
 \bibliography{example.bib}
-%References
-%[1] P.A. Tipler and G. Mosca. Physics for Scientists and Engineers, 5th ed. (W H Freeman and Company, New York, 2004).
-%
-%“De Caelo : Aristotle : Free Download, Borrow, and Streaming : Internet Archive.” Internet Archive, 2026, archive.org/details/decaelo00aris. Accessed 12 Jan. 2026.
-%
-%Galilei, G. Dialogues Concerning Two New Sciences (1638).
-%
-%Chazot, Christophe. FizziQ. 5.0.4, Trapèze. Digital, 2025, Apple App Store.
+% References
+% Tipler, P. A., & Mosca, G. (2003). Physics for Scientists and Engineers (5th ed.). W. H. Freeman.
+% Chazot, C. (2025). FizziQ (Version 5.0.4) [Mobile application]. Trapèze. Available on Apple App Store.
+% Google LLC. (2026). Google Sheets. Retrieved from https://www.google.com/sheets/about/
+% R Core Team. (2025). R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria. Retrieved from https://www.R-project.org/
+% Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. https://ggplot2.tidyverse.org
 
 
 \end{document}
