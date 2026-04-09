@@ -69,7 +69,7 @@ pdfauthor={Kaitlin Coulanges, Saanvi Dakwale, Samantha Hein, Reese Wallace, and 
 
 % AUTHORS PUT YOUR MANUSCRIPT IN BELOW HERE
 \begin{abstract}
-This experiment investigates whether the facial expression of a popper affects its maximum jump height using principles of energy conservation. Five ``happy'' poppers and five ``sad'' poppers were compressed to maximum depth and released, converting elastic potential energy into kinetic energy, and then gravitational potential energy. Elastic potential energy was measured via a force-compression graph ($EPE = \qty{0.294}{\joule}$). Mean kinetic energy ($K$) at launch was \qty{0.0941}{\joule} (happy) and \qty{0.0814}{\joule} (sad), representing approximately \num{32}\% and \num{28}\% of stored $EPE$ respectively. Paired $t$-tests confirmed that $K$ at launch and $GPE$ at peak were not significantly different within either group (happy: $p = 0.41$; sad: $p = 0.43$), verifying that mechanical energy is conserved during flight. Two-sample $t$-tests found no statistically significant difference in mass ($p = 0.12$) or height ($p = 0.24$). These results support the hypothesis that facial expression does not affect energy transfer, and that popper motion is governed by elastic properties and mass rather than surface design.
+This experiment investigates whether the facial expression of a popper affects its maximum jump height using principles of energy conservation. Five ``happy'' poppers and five ``sad'' poppers were compressed to maximum depth and released, converting elastic potential energy into kinetic energy, and then gravitational potential energy. Elastic potential energy was measured via a force-compression graph ($EPE = \qty{294.0}{\milli\joule}$). Mean kinetic energy ($KE$) at launch was \qty{94.1}{\milli\joule} (happy) and \qty{81.4}{\milli\joule} (sad), representing approximately \num{32}\% and \num{28}\% of stored $EPE$ respectively. Paired $t$-tests confirmed that $KE$ at launch and $GPE$ at peak were not significantly different within either group (happy: $p = 0.41$; sad: $p = 0.43$), verifying that mechanical energy is conserved during flight. Two-sample $t$-tests found no statistically significant difference in mass ($p = 0.12$) or height ($p = 0.24$). These results support the hypothesis that facial expression does not affect energy transfer, and that popper motion is governed by elastic properties and mass rather than surface design.
 
 %\vspace{1em} % Add space before DOI
 %\noindent DOI: \href{https://doi.org/10.64804/xxxxxx}{10.64808/xxxxxx}
@@ -159,64 +159,75 @@ The measured mass, maximum jump height, and calculated gravitational potential e
 \caption{Force versus compression graph used to calculate total $EPE$ via area under the curve.}
 \label{fig:force_graph} 
 \end{figure}
-The force-compression graph is seen in \cref{fig:force_graph}. Total ($EPE$) was calculated by integrating the area under the curve in three segments, giving \qty{0.294}{\joule}.
+The force-compression graph is seen in \cref{fig:force_graph}. Total ($EPE$) was calculated by integrating the area under the curve in three segments, giving \qty{294.0}{\milli\joule}.
 
 \begin{table}
-\caption{Mass $m$, height $h$, and gravitational potential energy for happy poppers.}
+\caption{Mass $m$, height $h$, and energy data for Happy Poppers.}
 \label{tab:happy} 
 \begin{ruledtabular}
 \begin{tabular}{cS[table-format=1.4]S[table-format=1.2]S[table-format=3.1]} 
-trial & {$m$, \unit{\kilo\gram}} & {$h$, \unit{\meter}} & {GPE, \unit{\milli\joule}} \\
+trial & {$m$, \unit{\kilo\gram}} & {$h$, \unit{\meter}} & {$v_{\text{launch}}$, \unit{\meter\per\second}} & {$KE$, \unit{\milli\joule}} & {$GPE$, \unit{\milli\joule}} & {KE - GPE, \unit{\milli\joule}} \\
 \colrule \\
-1 & 0.0058 & 2.12 & 120.5 \\
-2 & 0.0057 & 1.82 & 101.7 \\
-3 & 0.0056 & 1.47 & 80.8 \\
-4 & 0.0057 & 1.67 & 93.4 \\
-5 & 0.0056 & 1.54 & 84.6 \\
+1 & 0.0058 & 2.12 & 6.26 & 113.6 & 120.6 & 7.0 \\
+2 & 0.0057 & 1.82 & 6.10 & 105.9 & 101.8 & 4.1 \\
+3 & 0.0056 & 1.47 & 5.16 & 74.4 & 80.8 & 6.3 \\
+4 & 0.0057 & 1.67 & 5.78 & 95.3 & 93.4 & 1.9 \\
+5 & 0.0056 & 1.54 & 5.39 & 81.3 & 84.6 & 3.4 \\
 \colrule 
-mean & 0.0057 & 1.72 & 96.2 \\
-sd & 0.00008 & 0.26 & 15.6 \\
+mean & 0.0057 & 1.72 & 5.74 & 94.1 & 96.2 & 4.6 \\
+sd & 0.00008 & 0.26 & 0.46 & 16.3 & 15.9 & 2.2 \\
 \end{tabular} 
 \end{ruledtabular}
 \end{table}
 
 \begin{table}
-\caption{Mass $m$, height $h$, and gravitational potential energy for sad poppers.}
+\caption{Mass $m$, height $h$, and energy data for sad poppers.}
 \label{tab:sad} 
 \begin{ruledtabular}
 \begin{tabular}{cS[table-format=1.4]S[table-format=1.2]S[table-format=2.1]} 
-trial & {$m$, \unit{\kilo\gram}} & {$h$, \unit{\meter}} & {GPE, \unit{\milli\joule}} \\
+trial & {$m$, \unit{\kilo\gram}} & {$h$, \unit{\meter}} & {$v_{\text{launch}}$, \unit{\meter\per\second}} & {$KE$, \unit{\milli\joule}} & {$GPE$, \unit{\milli\joule}} & {KE - GPE, \unit{\milli\joule}} \\
 \colrule \\
-1 & 0.0050 & 1.63 & 79.9 \\
-2 & 0.0055 & 1.30 & 70.1 \\
-3 & 0.0056 & 1.53 & 84.0 \\
-4 & 0.0057 & 1.72 & 96.2 \\
-5 & 0.0055 & 1.58 & 85.2 \\
+1 & 0.0050 & 1.63 & 5.77 & 83.2 & 80.0 & 3.2 \\
+2 & 0.0055 & 1.30 & 4.90 & 66.0 & 70.1 & 4.1 \\
+3 & 0.0056 & 1.53 & 5.42 & 82.4 & 84.1 & 1.7 \\
+4 & 0.0057 & 1.72 & 5.58 & 88.6 & 96.2 & 7.5 \\
+5 & 0.0055 & 1.58 & 5.62 & 87.0 & 85.2 & 1.7 \\
 \colrule 
-mean & 0.0055 & 1.55 & 83.1 \\
-sd & 0.0002 & 0.16 & 9.2 \\
+mean & 0.0055 & 1.55 & 5.46 & 81.4 & 83.1 & 3.7 \\
+sd & 0.0002 & 0.16 & 0.34 & 9.0 & 9.4 & 2.4 \\
 \end{tabular} 
 \end{ruledtabular}
 \end{table}
 
-The results of the two-sample $t$-tests are presented in \cref{tab:stats}. At the $\alpha = 0.05$ significance level, no statistically significant differences were found between the two groups for any of the measured variables.
+The results of the two-sample $t$-tests are presented in \cref{tab:stats}. At the $\alpha = 0.05$ significance level, no statistically significant differences were found between the two groups for either of the measured variables.
 \begin{table}
-\caption{Two-sample $t$-test results for mass $m$, height $h$, and GPE.}
+\caption{Two-sample $t$-test results for mass $m$ and height $h$}
 \label{tab:stats} 
 \begin{ruledtabular}
 \begin{tabular}{lSSSS} 
-variable   & {$t$-value} & {df} & {$p$-value} & {$\alpha$} \\
-\colrule \\
-mass $m$   & 1.74 & 8 & 0.14 & 0.05 \\
-height $h$ & 1.27 & 8 & 0.25 & 0.05 \\
-GPE        & 1.59 & 8 & 0.16 & 0.05 \\
+variable   & {$t$-value} & {df} & {$p$-value} \\
+\colrule
+mass $m$   & 1.74 & 8 & 0.12 \\
+height $h$ & 1.27 & 8 & 0.24 \\
 \end{tabular}
 \end{ruledtabular} 
 \end{table}
 
+\begin{table} 
+\caption{Paired $t$-test results for $KE$ at launch and $GPE$ at peak}
+\label{tab:ttest_paired}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+group & $t$-statistic & $df$ & $p$-value \\ 
+\colrule
+Happy & -0.93 & 4 & 0.41 \\ 
+Sad & -0.88 & 4 & 0.43 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
 \begin{figure}
 \begin{center}
-%\includesvg[width=\columnwidth]{myplot.svg}
 \includesvg[width=\columnwidth]{fig2.svg}
 \end{center} 
 \caption{Mean maximum jump height for happy and sad poppers. Error bars represent $\pm 1$ standard deviation ($n = 5$ per group).}
@@ -240,7 +251,7 @@ The results of this experiment indicate that popper design does not have a stati
 
 Energy conservation during the flight period was tested to determine if height was a valid measure of energy output. As found in \cref{tab:ttest_paired}, the paired $t$-test within each group found no statistically significant difference between $KE$ at launch and $GPE$ at peak height (happy: $p = 0.41$, sad: $p = 0.43$). This confirms that mechanical energy was conserved during the flight period and that $GPE$ at peak reliably reflects $KE$ at launch. This also indicates that $EPE$ was successfully transferred into upward motion.
 
-The force-compression measurement gave an $EPE$ of \qty{0.294}{\joule}. As seen by \cref{tab:happy} and \cref{tab:sad}, mean $KE$ at launch for the happy poppers was \qty{0.0941}{\joule} and \qty{0.0814}{\joule} for the sad poppers, representing approximately \num{32}\% and \num{28}\% of the stored $EPE$, respectively. This suggests that approximately \num{70}\% of the elastic energy is lost during the initial compression phase, likely as heat, sound, or internal deformation. Once launched, however, both types conserve energy with comparable efficiency, further supporting the conclusion that facial expression does not influence energy transfer.
+The force-compression measurement gave an $EPE$ of \qty{294.0}{\milli\joule}. As seen by \cref{tab:happy} and \cref{tab:sad}, mean $KE$ at launch for the happy poppers was \qty{0.0941}{\joule} and \qty{0.0814}{\joule} for the sad poppers, representing approximately \num{32}\% and \num{28}\% of the stored $EPE$, respectively. This suggests that approximately \num{70}\% of the elastic energy is lost during the initial compression phase, likely as heat, sound, or internal deformation. Once launched, however, both types conserve energy with comparable efficiency, further supporting the conclusion that facial expression does not influence energy transfer.
 
 Overall, the statistical results and graphical evidence  support the hypothesis that facial expression does not influence maximum jump height. Instead, the motion of the poppers is governed primarily by elastic properties, mass, and energy conservation mechanisms rather than design features.
 
