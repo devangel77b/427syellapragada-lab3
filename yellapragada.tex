@@ -20,6 +20,9 @@
 \crefname{table}{Table}{Tables}
 \usepackage{svg}
 \svgpath{{./figures}}
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
 
 
 
@@ -35,8 +38,8 @@ pdfauthor={Kaitlin Coulanges, Saanvi Dakwale, Samantha Hein, Reese Wallace, and 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[RE,RO]{J S\&E \textbf{2}, xx--xx (2026)} % FOR EDITOR ONLY
-\fancyhead[LO]{Yellapragada \emph{et al}} % if many authors
+\fancyhead[RE,RO]{J S\&E \textbf{2}, 86--88 (2026)} % FOR EDITOR ONLY
+\fancyhead[LO]{Coulanges \emph{et al}} % if many authors
 %\fancyhead[LO]{John and Dee} % if short enough to list all authors
 \fancyhead[LE]{The effect of popper design on maximum jump height} % full or short title depending on what fits
 %\fancyhead[LE}{Several species of small furry animals gathered together in a cave and grooving with a pict} % might be too long
@@ -44,14 +47,15 @@ pdfauthor={Kaitlin Coulanges, Saanvi Dakwale, Samantha Hein, Reese Wallace, and 
 \fancyfoot[C]{\thepage}
 \fancypagestyle{mytitlepage}{
 \fancyhf{}
-\fancyhead[C]{Journal of Science \& Engineering \textbf{2}, xx--xx (2026)} % FOR EDITOR ONLY
+\fancyhead[C]{Journal of Science \& Engineering \textbf{2}, 86--88 (2026)} % FOR EDITOR ONLY
 \fancyfoot[C]{\thepage}
 %\fancyfoot[L]{\scriptsize\copyright\ 2026 Journal of Science \& Engineering, \href{https://creativecommons.org/licenses/by-nc/4.0/}{CC-BY-NC 4.0}}
+\fancyfoot[L]{\scriptsize\copyright\ 2026 J S\&E \href{https://creativecommons.org/licenses/by-nc/4.0/}{CC-BY-NC 4.0}}
 }
 
 
 \begin{document}
-%\setcounter{page}{67} % FOR EDITOR USE ONLY
+\setcounter{page}{86} % FOR EDITOR USE ONLY
 %\linenumbers % FOR EDITOR USE ONLY
 
 % AUTHORS EDIT THIS PART
@@ -64,20 +68,24 @@ pdfauthor={Kaitlin Coulanges, Saanvi Dakwale, Samantha Hein, Reese Wallace, and 
 \email[Contact author: ]{427syellapragada@frhsd.com} % use FRHSD address
 % For S&E authors
 \affiliation{Science \& Engineering Magnet Program, \href{https://manalapan.frhsd.com/}{Manalapan High School}, Englishtown, NJ 07726 USA}
-\date{\today}
+%\date{\today}
+\received{31 January 2026}
+\accepted[accepted~]{31 March 2026}
+\published[published~]{13 May 2026}
 
 
 % AUTHORS PUT YOUR MANUSCRIPT IN BELOW HERE
 \begin{abstract}
 This experiment investigates whether the facial expression of a popper affects its maximum jump height using principles of energy conservation. Five ``happy'' poppers and five ``sad'' poppers were compressed to maximum depth and released, converting elastic potential energy into kinetic energy, and then gravitational potential energy. Elastic potential energy was measured via a force-compression graph ($EPE = \qty{294.0}{\milli\joule}$). Mean kinetic energy ($KE$) at launch was \qty{94.1}{\milli\joule} (happy) and \qty{81.4}{\milli\joule} (sad), representing approximately \num{32}\% and \num{28}\% of stored $EPE$ respectively. Paired $t$-tests confirmed that $KE$ at launch and $GPE$ at peak were not significantly different within either group (happy: $p = 0.41$; sad: $p = 0.43$), verifying that mechanical energy is conserved during flight. Two-sample $t$-tests found no statistically significant difference in mass ($p = 0.12$) or height ($p = 0.24$). These results support the hypothesis that facial expression does not affect energy transfer, and that popper motion is governed by elastic properties and mass rather than surface design.
 
-%\vspace{1em} % Add space before DOI
-%\noindent DOI: \href{https://doi.org/10.64804/xxxxxx}{10.64808/xxxxxx}
+\vspace{1em} % Add space before DOI
+\noindent DOI: \href{https://doi.org/10.64804/2t93cp73}{10.64808/2t93cp73}
 \end{abstract}
 
 \keywords{kinematics, energy conservation, elastic potential energy, poppers}
 
 \maketitle\thispagestyle{mytitlepage}
+\blfootnote{\\\emph{Published by the Journal of Science \& Engineering under the terms of the \href{https://creativecommons.org/licenses/by-nc/4.0/}{Creative Commons Attribution-NonCommercial 4.0 International} license. Further distribution of this work must maintain attribution to the author(s) and the published article's title, journal citation, and DOI.}}
 
 %The current column width is \the\columnwidth
 
@@ -160,6 +168,16 @@ The measured mass, maximum jump height, and calculated gravitational potential e
 \label{fig:force_graph} 
 \end{figure}
 The force-compression graph is seen in \cref{fig:force_graph}. Total ($EPE$) was calculated by integrating the area under the curve in three segments, giving \qty{294.0}{\milli\joule}.
+
+\begin{figure}
+\begin{center}
+\includesvg[width=\columnwidth]{force_graph.svg}
+\end{center}
+\caption{Force versus compression graph used to calculate total elastic potential energy via area under the curve.}
+\label{fig:force_graph}
+\end{figure}
+
+The force compression graph is seen in \cref{fig:force_graph}. Total elastic potential energy was calcualated by integrating the area under the curve in...
 
 \begin{table}
 \caption{Mass $m$, height $h$, and energy data for Happy Poppers.}
